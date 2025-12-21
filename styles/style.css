@@ -1,0 +1,140 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFBFB;
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    height: 10vh;
+    padding: 0 3vw;
+    font-family: Roboto;
+    box-shadow: 0 0 15px #111111;
+    
+}
+.left-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    cursor: pointer;
+}
+.left-section a 
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+.left-section a img
+{
+    max-width: 3.5vw;
+}
+.right-section ul
+{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    list-style: none;
+}
+.right-section ul li
+{
+    text-decoration: none;
+}
+.right-section ul li a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.right-section ul li a img 
+{
+    max-width: 1.75vw;
+}
+.left-part
+{
+    display: flex;
+    gap: 1.5vw;
+    margin-right: 1.5vw;
+}
+.left-part li a 
+{
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+}
+.right-part 
+{   
+    gap: 0.8vw;
+    display: flex;
+    align-items: center;
+}
+.right-section ul .left-part li a:hover
+{
+    background-color: #202020;
+    border-radius: 15px;
+    transition: background-color 0.2s;
+}
+.dropdown 
+{
+    position: relative;
+}
+.dropdown-menu 
+{
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+.dropdownPeriferije
+{
+    left: -10%;
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.navbar .right-section .dropdown-menu li a 
+{
+    
+    font-size: 1.2rem;  
+    padding: 0.5rem 1rem;
+    color: white;
+
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.dropdown-menu {
+    margin-top: 0.5rem;
+}
+.main 
+{
+    text-align: center;
+}
+.main .slide a img
+{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
