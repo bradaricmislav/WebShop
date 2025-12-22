@@ -56,6 +56,7 @@ body
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 0.5vw;
 }
 .right-section ul li a img 
 {
@@ -164,10 +165,13 @@ body
 {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 12px 10px;
+    padding: 0.5vw;
     transition: transform 0.3s ease;
-    width: 12vw;       
-    height: fit-content;
+    width: 13vw;      
+    height: 40vh;
+    background-color: #ffffff;
+    padding-bottom: 3vh;
+    padding-top: 0;
 }
 .container .main .game-cards .card:hover 
 {
@@ -187,21 +191,28 @@ body
     background-color: #111111;
     color: white;
     border: 1px solid #111111;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 12px 10px;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 7vw;
 }
 .container .main .game-cards .card button:hover 
 {
     transform: translateY(-5px);
     opacity: 0.7;
 }
+.container .main .game-cards .card button:active 
+{
+    opacity: 0.5;
+}
 .container .main .game-cards .card a img
 {
-    width: 10vw;
+    width: 12vw;
+    height: auto;
+    mix-blend-mode: multiply;
 }
 .container .main .consoles
 {
@@ -240,6 +251,15 @@ body
     height: 50vh;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    transition: opacity 0.25s ease;
+}
+.container .main .consoles .console:hover 
+{
+    opacity: 0.7;
+}
+.container .main .consoles .console:active 
+{
+    opacity: 0.5;
 }
 .container .main .consoles .nintendo
 {
