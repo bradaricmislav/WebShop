@@ -106,6 +106,7 @@ body
     transition: 0.25s ease;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 .dropdownPeriferije
 {
@@ -146,12 +147,47 @@ body
 .main .image-slider 
 {
     grid-area: top;
+    position: relative;
 }
 .main .slide a img
 {
     width: 100%;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.previousSlide, .nextSlide
+{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.4);
+    top: 45%;
+    transition: opacity 0.2s;
+}
+.slide 
+{
+    display: none;
+    transition: opacity 0.8s ease-in-ou
+}
+.previousSlide
+{
+    left: 0.75vw;
+}
+.nextSlide
+{
+    right: 0.75vw;
+}
+.previousSlide:hover, .nextSlide:hover 
+{
+    opacity: 0.7;
+}
+.previousSlide:active, .nextSlide:active 
+{
+    opacity: 0.5;
 }
 .container .main .game-cards
 {
@@ -227,6 +263,7 @@ body
         "xbox nintendo";
     max-width: 80vw;
     margin: 0 auto;
+    align-items: center;
 }
 .ps5 { 
     grid-area: ps5; 
