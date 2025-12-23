@@ -73,6 +73,7 @@ body
 {
     padding: 0.5rem 1rem;
     transition: background-color 0.2s;
+    border-radius: 15px;
 }
 .right-part 
 {   
@@ -95,7 +96,8 @@ body
 {
     position: absolute;
     top: 100%;
-    left: -20%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #1a1a1a;
     border-radius: 8px;
     padding: 0.5rem 0;
@@ -109,13 +111,10 @@ body
     flex-direction: column;
     z-index: 1;
 }
-.dropdownPeriferije
-{
-    left: 0;
-}
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%);
 }
 .navbar .right-section .dropdown-menu li a 
 {
