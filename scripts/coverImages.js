@@ -20,8 +20,8 @@ let coverImagesHTML = "";
 coverImages.forEach((coverImage) => {
     coverImagesHTML += `
         <div class="slide"><a href=""><img src="images/${coverImage.image}" alt="${coverImage.name}"></a></div>
-        <div onclick="changeSlide(-1)" class="previousSlide">&#10094;</div>
-        <div onclick="changeSlide(1)" class="nextSlide">&#10095;</div>
     ` 
 })
+coverImagesHTML += `<div onclick="changeSlide(-1)" class="previousSlide">&#10094;</div>
+        <div onclick="changeSlide(1)" class="nextSlide">&#10095;</div>`
 document.querySelector(".image-slider").innerHTML = coverImagesHTML;

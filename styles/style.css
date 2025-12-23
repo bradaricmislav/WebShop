@@ -171,6 +171,8 @@ body
 .slide 
 {
     display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 .previousSlide
 {
@@ -187,6 +189,11 @@ body
 .previousSlide:active, .nextSlide:active 
 {
     opacity: 0.5;
+}
+@keyframes fade 
+{
+    from {opacity: .5;}
+    to {opacity: 1;}
 }
 .container .main .game-cards
 {
