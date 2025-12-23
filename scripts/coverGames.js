@@ -37,28 +37,28 @@ const games =
         priceCents: 3500
     },
     {
-        id: "1921",
-        image: "../images/nba2k26.jpg",
-        name: "NBA 2K26",
-        priceCents: 3500
+        id: "5335",
+        image: "../images/acshadows.jpg",
+        name: "Assassin's Creed Shadows",
+        priceCents: 3999
     },
     {
-        id: "1921",
-        image: "../images/nba2k26.jpg",
-        name: "NBA 2K26",
-        priceCents: 3500
+        id: "1520",
+        image: "../images/deathstranding2.jpg",
+        name: "Death Stranding 2",
+        priceCents: 5999
     },
     {
-        id: "1921",
-        image: "../images/nba2k26.jpg",
-        name: "NBA 2K26",
-        priceCents: 3500
+        id: "4194",
+        image: "../images/gt7.jpg",
+        name: "Gran Turismo 7",
+        priceCents: 3999
     },
     {
-        id: "1921",
-        image: "../images/nba2k26.jpg",
-        name: "NBA 2K26",
-        priceCents: 3500
+        id: "3564",
+        image: "../images/borderlands4.jpg",
+        name: "Borderlands 4",
+        priceCents: 6499
     }
 ];
 let gamesHTML = '';
