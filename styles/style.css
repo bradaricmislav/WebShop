@@ -3,6 +3,7 @@ body
     margin: 0;
     padding: 0;
     background-color: #FFFBFB;
+    font-family: Roboto;
 }
 .navbar
 {
@@ -148,6 +149,7 @@ body
 {
     grid-area: top;
     position: relative;
+    width: 100%;
 }
 .main .slide a img
 {
@@ -165,7 +167,8 @@ body
     font-size: 24px;
     border-radius: 3px;
     background: rgba(0, 0, 0, 0.4);
-    top: 42.5%;
+    top: 50%;
+    transform: translateY(-50%);
     transition: opacity 0.2s;
 }
 .slide 
@@ -197,11 +200,37 @@ body
 }
 .container .main .game-cards
 {
-    margin-top: 2.5vh;
+    font-family: Roboto;
     grid-area: middle;
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
+    display: flex; 
+    flex-wrap: nowrap;
+    gap: 1.5vw;
+    overflow-x: auto;
+    width: 95vw;
+    margin: 2.5vh auto;
+    margin-top: 2.5vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    box-sizing: border-box
+}
+.container .main .game-cards::-webkit-scrollbar 
+{
+    height: 5px; 
+    width: 2vw;
+}
+
+.container .main .game-cards::-webkit-scrollbar-track 
+{
+    background: none;
+    margin: 0 0.5vw;
+    
+}
+
+.container .main .game-cards::-webkit-scrollbar-thumb 
+{
+    background-color: #111111;
+    border-radius: 10px;
 }
 .container .main .game-cards .card
 {
@@ -210,7 +239,7 @@ body
     padding: 0.5vw;
     transition: transform 0.3s ease;
     width: 13vw;      
-    height: 40vh;
+    height: auto;
     background-color: #ffffff;
     padding-bottom: 3vh;
     padding-top: 0;
@@ -256,6 +285,11 @@ body
     height: auto;
     mix-blend-mode: multiply;
 }
+.game-price
+{
+    color: #FF4365;
+    font-weight: bold;
+}
 .container .main .consoles
 {
     display: grid;
@@ -267,9 +301,9 @@ body
     grid-template-areas: 
         "ps5 nintendo"
         "xbox nintendo";
-    max-width: 80vw;
     margin: 0 auto;
     align-items: center;
+    width: 95vw;
 }
 .ps5 { 
     grid-area: ps5; 
@@ -290,7 +324,7 @@ body
 
 .container .main .consoles .console 
 {
-    width: 40vw;
+    width: 100%;
     height: 50vh;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;

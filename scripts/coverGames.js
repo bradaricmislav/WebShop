@@ -35,6 +35,30 @@ const games =
         image: "../images/nba2k26.jpg",
         name: "NBA 2K26",
         priceCents: 3500
+    },
+    {
+        id: "1921",
+        image: "../images/nba2k26.jpg",
+        name: "NBA 2K26",
+        priceCents: 3500
+    },
+    {
+        id: "1921",
+        image: "../images/nba2k26.jpg",
+        name: "NBA 2K26",
+        priceCents: 3500
+    },
+    {
+        id: "1921",
+        image: "../images/nba2k26.jpg",
+        name: "NBA 2K26",
+        priceCents: 3500
+    },
+    {
+        id: "1921",
+        image: "../images/nba2k26.jpg",
+        name: "NBA 2K26",
+        priceCents: 3500
     }
 ];
 let gamesHTML = '';
@@ -42,7 +66,7 @@ games.forEach((game) => {
     gamesHTML += `
     <div class="card">
         <a href=""><img src="images/${game.image}" alt="">${game.name}</a>
-            <p>${(game.priceCents/100).toFixed(2)}€</p>
+            <p class="game-price">${(game.priceCents/100).toFixed(2)}€</p>
             <button>U košaricu</button>
     </div>
     `;
