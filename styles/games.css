@@ -14,6 +14,7 @@ body
 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
     font-family: Roboto;
     gap: 1.5vw;
     width: 95vw;

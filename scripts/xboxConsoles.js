@@ -29,7 +29,7 @@ function renderConsoles(consoles)
         consolesHTML += `
             <div class="card">
                 <a href=""><img src="${console.image}" alt="">${console.name}</a>
-                <p class="console-price">${(console.priceCents/100).toFixed(2)}</p>
+                <p class="console-price">${(console.priceCents/100).toFixed(2)}€</p>
                 <button>U košaricu</button>
             </div>
         `
