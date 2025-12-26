@@ -1,0 +1,68 @@
+.container .filter-and-sort
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.container .filter-and-sort .sort .sort-select, .container .filter-and-sort .filter a
+{
+    border-radius: 25px;
+    border: none;
+    padding: 12px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container .filter-and-sort .filter a
+{
+    padding: 12px 40px;
+    background-color: white;
+}
+.container .filter-and-sort .filter a:hover 
+{
+    background-color: #111111;
+    color: white;
+}
+.price-slider-container
+{
+    display: none;
+}
+.filter a:hover .price-slider-container
+{
+    display: block;
+}
+
+.container .game-pages
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container .game-pages a 
+{
+    background-color: white;
+    color: #111111;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container .game-pages a:hover 
+{
+    background-color: #111111;
+    color: white;
+}
+.container .game-pages a.active 
+{
+    background-color: #111111;
+    color: white;
+}

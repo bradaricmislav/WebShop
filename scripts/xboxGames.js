@@ -1,7 +1,7 @@
 export const xboxGames = [
     {
         id: "8014",
-        image: "../../images/xbox/codeveinii.jpg",
+        image: "../../images/xbox/codeveinii.webp",
         name: "Code Vein II",
         priceCents: 7549,
         releaseDate: "2026-01-30"
