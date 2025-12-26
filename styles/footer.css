@@ -1,0 +1,98 @@
+.container .footer
+{
+    margin-top: 2vh;
+    height: 30vh;
+    background-color: #111111;
+    box-shadow: 0 0 15px #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .footer .left-section, .container .footer .middle-section, .container .footer .right-section 
+{
+    flex: 1;            
+    display: flex;
+}
+.container .footer .left-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container .footer .location a, .phone-number a, .mail a, .working-time a 
+{
+    font-size: 1rem;
+    display: flex;
+    gap: 0.75vw;
+    margin-left: 1.5vw;
+}
+.container .footer .working-time .no-click
+{
+    pointer-events: none;
+    cursor: text;
+}
+.container .footer .location a img, .phone-number a img, .mail a img, .working-time a img 
+{
+    width: 30px;
+}
+.container .footer .middle-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .footer .logo-and-name
+{
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+}
+.container .footer .logo-and-name img 
+{
+    width: 115px;
+}
+.container .footer .logo-and-name p 
+{
+    font-family: Roboto;
+    color: white;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+.container .footer .right-section
+{
+    display: flex;
+    justify-content: end;
+    margin-right: 1.3vw;
+    align-items: start;
+    margin-bottom: 5.5vh;
+}
+.container .footer .right-section p
+{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+}
+.container .footer .right-section a img 
+{
+    margin: 0.2vw;
+    width: 65px;
+}
+.container .copyright
+{
+    height: 5vh;
+    background-color: #1a1a1a;
+    margin-top: -2.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.5);
+    border-top: 1px solid #222;
+    margin-bottom: 0;
+}
+.container .copyright h3 
+{
+    color: white;
+    font-family: Roboto;
+}

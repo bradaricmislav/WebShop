@@ -1,0 +1,214 @@
+.main 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "top top top" 
+    "top top top" 
+    "middle middle middle" 
+    "bottom bottom bottom" 
+    "bottom bottom bottom";
+    text-align: center;
+}
+.main .image-slider 
+{
+    grid-area: top;
+    position: relative;
+    width: 100%;
+}
+.main .slide a img
+{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.previousSlide, .nextSlide
+{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s;
+}
+.slide 
+{
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.previousSlide
+{
+    left: 0.75vw;
+}
+.nextSlide
+{
+    right: 0.75vw;
+}
+.previousSlide:hover, .nextSlide:hover 
+{
+    opacity: 0.7;
+}
+.previousSlide:active, .nextSlide:active 
+{
+    opacity: 0.5;
+}
+@keyframes fade 
+{
+    from {opacity: .5;}
+    to {opacity: 1;}
+}
+.container .main .game-cards
+{
+    font-family: Roboto;
+    grid-area: middle;
+    display: flex; 
+    flex-wrap: nowrap;
+    gap: 1.5vw;
+    overflow-x: auto;
+    width: 95vw;
+    margin: 2.5vh auto;
+    margin-top: 2.5vh;
+    padding-bottom: 2vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    box-sizing: border-box
+}
+.container .main .game-cards::-webkit-scrollbar 
+{
+    height: 5px; 
+    width: 2vw;
+}
+
+.container .main .game-cards::-webkit-scrollbar-track 
+{
+    background: none;
+    margin: 0 0.5vw;
+    
+}
+
+.container .main .game-cards::-webkit-scrollbar-thumb 
+{
+    background-color: #111111;
+    border-radius: 10px;
+}
+.container .main .game-cards .card
+{
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5vw;
+    transition: transform 0.3s ease;
+    width: 250px;      
+    height: 400px;
+    flex-shrink: 0; 
+    flex-grow: 0;
+    background-color: #ffffff;
+    padding-bottom: 3vh;
+    padding-top: 0;
+}
+.container .main .game-cards .card:hover 
+{
+    transform: translateY(-5px);
+}
+.container .main .game-cards .card a
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+.container .main .game-cards .card button
+{
+    background-color: #111111;
+    color: white;
+    border: 1px solid #111111;
+    border-radius: 25px;
+    padding: 12px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 135px;
+}
+.container .main .game-cards .card button:hover 
+{
+    transform: translateY(-5px);
+    opacity: 0.7;
+}
+.container .main .game-cards .card button:active 
+{
+    opacity: 0.5;
+}
+.container .main .game-cards .card a img
+{
+    width: 230px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+.game-price
+{
+    color: #FF4365;
+    font-weight: bold;
+}
+.container .main .consoles
+{
+    display: grid;
+    grid-area: bottom;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 2vw;
+    padding: 1vw;
+    grid-template-areas: 
+        "ps5 nintendo"
+        "xbox nintendo";
+    margin: 0 auto;
+    align-items: center;
+    width: 95vw;
+}
+.ps5 { 
+    grid-area: ps5; 
+}
+.xbox { 
+    grid-area: xbox; 
+}
+.nintendo 
+{ 
+    grid-area: nintendo;
+}
+.console img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain; 
+}
+
+.container .main .consoles .console 
+{
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: opacity 0.25s ease;
+}
+.container .main .consoles .console:hover 
+{
+    opacity: 0.7;
+}
+.container .main .consoles .console:active 
+{
+    opacity: 0.5;
+}
+.container .main .consoles .nintendo
+{
+    background-color: #E60012;
+    height: 104.5vh;
+}
+

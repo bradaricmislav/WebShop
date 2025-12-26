@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameShop</title>
+    <link rel="stylesheet" href="../../styles/body.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/games.css">
+    <link rel="stylesheet" href="../../styles/homepage-responsivity.css">
+    <link rel="icon" href="../../images/joystick.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="left-section">
+                <a href="../../index.html"><img src="../../images/joysticklogo.png" alt="Logo"></a>
+                <a href="../../index.html">GameShop</a>
+            </div>
+            <div class="right-section">
+                <ul>
+                    <div class="left-part">
+                        <li class="dropdown">
+                            <a href="../../pages/game-pages/all-games.html"><img src="../../images/disc.png" alt="">Igre</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">PlayStation 5</a></li>
+                                <li><a href="../../pages/game-pages/xbox-games.html">Xbox</a></li>
+                                <li><a href="../../pages/game-pages/nintendo-games.html">Nintendo</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href=""><img src="../../images/controller.png" alt="">Konzole</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">PlayStation 5</a></li>
+                                <li><a href="">Xbox</a></li>
+                                <li><a href="">Nintendo</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href=""><img src="../../images/headphone-mic.png" alt="">Periferija</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">PlayStation 5</a></li>
+                                <li><a href="">Xbox</a></li>
+                                <li><a href="">Nintendo</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="hamburger">
+                        <a href="#" class="hamburger-toggle"><img src="../../images/menu.png" alt=""></a>
+                        <ul class="hamburger-menu">
+                                <li><a href="">Igre</a></li>
+                                <li><a href="">Konzole</a></li>
+                                <li><a href="">Periferija</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-part">
+                        <li class="search">
+                            <a href="#" class="search-toggle"><img class="search-icon" src="../../images/search.png" alt="Search"></a>
+                            <input type="search" class="search-bar" placeholder="Pretraži">
+                        </li>
+                        <li><a href=""><img src="../../images/cart.png" alt="Cart"></a></li>
+                    </div>
+                </ul> 
+            </div>
+        </div>
+        <div class="main">
+            <div class="console-names">
+                <h1>PlayStation 5 Igre</h1>
+            </div>
+            <div class="filter-and-sort">
+                <div class="filter">
+                    <a href="#">Filteri</a>
+                    <div class="price-slider-container">
+                        <h3>Filtriraj po cijeni</h3>
+                        <input type="range" id="price-range" min="20" max="780" value="780">
+                        <div class="price-label">Cijena: 20 € — <span id="current-price">780</span> €</div>
+                        <button class="filter-btn">Filtriraj</button>
+                    </div>
+                </div>
+                <div class="sort">
+                    <select class="sort-select">
+                        <option value="default">Zadano</option>
+                        <option value="price-asc">Jeftinije prvo</option>
+                        <option value="price-desc">Skuplje prvo</option>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="date-desc">Najnovije prvo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="game-pages">
+                <a href="../../pages/game-pages/all-games.html">Sve</a>
+                <a class="active" href="#">PS5</a>
+                <a href="../../pages/game-pages/xbox-games.html">Xbox</a>
+                <a href="../../pages/game-pages/nintendo-games.html">Nintendo</a>
+            </div>
+            <div class="game-cards">
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="left-section">
+                <div class="location">
+                    <a href="https://www.google.com/maps/place/Ul.+cara+Hadrijana+10b,+31000,+Osijek/@45.5566253,18.70941,17z/data=!3m1!4b1!4m6!3m5!1s0x475ce7c4ed9c2789:0x8adb72d1eae12e91!8m2!3d45.5566216!4d18.7119849!16s%2Fg%2F11j8w_6z1c?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><img src="../../images/location.png" alt="Location">Ul. cara Hadrijana 10b, Osijek</a>
+                </div>
+                <div class="phone-number">
+                    <a href="tel:+385 98778122"><img src="../../images/phone.png" alt="Broj telefona">+385 98778122</a>
+                </div>
+                <div class="mail">
+                    <a href="mailto:gameshop@info.hr"><img src="../../images/envelope-alt.png" alt="Email">gameshop@info.hr</a>
+                </div>
+                <div class="working-time">
+                    <a href="" class="no-click"><img src="../../images/clock.png" alt="Radno vrijeme">pon-pet: 8-20h, sub: 8-12h</a>
+                </div>
+            </div>
+            <div class="middle-section">
+                <div class="logo-and-name">
+                    <img src="../../images/joysticklogo.png" alt="Logo">
+                    <p>GameShop</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="follow-us">
+                    <p>pratite nas:</p>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="../../images/facebook.webp" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank"><img src="../../images/instagram.webp" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/" title="Youtube" target="_blank"><img src="../../images/youtube.webp" alt="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3>GameShop d.o.o © 2026</h3>
+        </div>
+    </div>
+    <script src="../../scripts/searchbar.js"></script>
+    <script src="../../scripts/hamburgerMenu.js"></script>
+    <script type="module" src="../../scripts/ps5Games.js"></script>
+</body>
+</html>
