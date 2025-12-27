@@ -42,44 +42,39 @@ export const ps5Periphery = [
         releaseDate: "2024-06-11"
     }
 ];
-renderPeriphery(ps5Periphery);
-function renderPeriphery(peripheries)
-{
-    let peripheriesHTML = "";
-    peripheries.forEach((periphery) => {
-        peripheriesHTML += `
-            <div class="card">
-                <a href=""><img src="${periphery.image}" alt="">${periphery.name}</a>
-                <p class="periphery-price">${(periphery.priceCents/100).toFixed(2)}€</p>
-                <button>U košaricu</button>
-            </div>
-        `;
-    });
-    document.querySelector(".periphery-cards").innerHTML = peripheriesHTML;
-}
+import { renderPeriphery } from "../utils/renderPeriphery.js";
+import { applySort } from "../utils/sort.js";
+import { filter } from "../utils/filter.js";
+import { reset } from "../utils/resetFilters.js";
+
+let currentPeripheries = [...ps5Periphery];
+let currentSort = "";
+
+
 const sortSelect = document.querySelector('.sort-select');
 sortSelect.addEventListener('change', () => {
-    const selectedOption = sortSelect.value;
-    let sortedPeripheries = [...ps5Periphery];
-    if(selectedOption === 'price-asc')
-    {
-        sortedPeripheries.sort((a,b) => a.priceCents - b.priceCents);
-    }
-    if(selectedOption === 'price-desc')
-    {
-        sortedPeripheries.sort((a,b) => b.priceCents - a.priceCents);
-    }
-    if(selectedOption === 'a-z')
-    {
-        sortedPeripheries.sort((a,b) => a.name.localeCompare(b.name))
-    }
-    if(selectedOption === 'z-a')
-    {
-        sortedPeripheries.sort((a,b) => b.name.localeCompare(a.name))
-    }
-    if(selectedOption === 'date-desc')
-    {
-        sortedPeripheries.sort((a,b) => new Date(b.releaseDate) - new Date(a.releaseDate))
-    }
+    currentSort = sortSelect.value;
+    const sortedPeripheries = applySort(currentPeripheries, currentSort);
     renderPeriphery(sortedPeripheries);
 });
+
+const filterBtn = document.querySelector(".filter-btn");
+
+filterBtn.addEventListener(("click"), () => {
+    const minPrice = document.querySelector(".min-price").value;
+    const maxPrice = document.querySelector(".max-price").value;
+    currentPeripheries = filter(ps5Periphery, minPrice, maxPrice);
+    renderPeriphery(applySort(currentPeripheries, currentSort));
+    filterContainer.classList.remove("active");
+});
+
+renderPeriphery(currentPeripheries);
+
+const resetBtn = document.querySelector(".reset-btn");
+resetBtn.addEventListener(("click"), () => {
+    document.querySelector(".min-price").value = "";
+    document.querySelector(".max-price").value = "";
+    currentPeripheries = reset(ps5Periphery);
+    renderPeriphery(applySort(currentPeripheries, currentSort));
+    filterContainer.classList.remove("active");
+})

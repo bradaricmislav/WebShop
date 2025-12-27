@@ -27,15 +27,81 @@
     background-color: #111111;
     color: white;
 }
-.price-slider-container
+.filter .filter-container .price-filter input::placeholder
 {
-    display: none;
+    font-family: Roboto;
+    color: black;
 }
-.filter a:hover .price-slider-container
+.filter .filter-container .price-filter input 
 {
-    display: block;
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
 }
+.filter .filter-container
+{
+    position: absolute;
+    margin-top: 20px;
+    left: -400px;
+    padding: 10px;
+    background-color: #111111;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: Roboto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s ease, left 0.5s ease;
+}
+.filter .filter-container.active
+{
+    left: 0;
+    opacity: 1;
+}
+.filter .filter-container h3, label
+{
+    color: white;
+}
+.filter .filter-container .filter-button-container
+{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 
+}
+.filter .filter-container .filter-btn
+{
+    text-align: center;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    transition: scale 0.3s ease;
+    width: 100px;
+}
+.filter .filter-container .reset-btn
+{
+    text-align: center;
+    background-color: #111111;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: scale 0.3s ease;
+    width: 100px;
+}
+.filter .filter-container button:hover
+{
+    scale: 1.05;
+}
 .container .game-pages
 {
     display: flex;

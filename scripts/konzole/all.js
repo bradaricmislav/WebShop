@@ -1,21 +1,21 @@
-import { ps5Periphery  } from "./ps5.js";
-import { xboxPeriphery } from "./xbox.js";
-import { nintendoPeriphery } from "./nintendo.js";
-import { renderPeriphery } from "../utils/renderPeriphery.js";
+import { ps5Consoles } from "./ps5.js";
+import { xboxConsoles } from "./xbox.js";
+import { nintendoConsoles } from "./nintendo.js";
+import { renderConsoles } from "../utils/renderConsoles.js";
 import { applySort } from "../utils/sort.js";
 import { filter } from "../utils/filter.js";
 import { reset } from "../utils/resetFilters.js";
 
-const allPeriphery = [...ps5Periphery, ...xboxPeriphery, ...nintendoPeriphery];
-let currentPeripheries = [...allPeriphery];
+const allConsoles = [...ps5Consoles, ...xboxConsoles, ...nintendoConsoles];
+let currentConsoles = [...allConsoles];
 let currentSort = "";
 
 
 const sortSelect = document.querySelector('.sort-select');
 sortSelect.addEventListener('change', () => {
     currentSort = sortSelect.value;
-    const sortedPeripheries = applySort(currentPeripheries, currentSort);
-    renderPeriphery(sortedPeripheries);
+    const sortedConsoles = applySort(currentConsoles, currentSort);
+    renderConsoles(sortedConsoles);
 });
 
 const filterBtn = document.querySelector(".filter-btn");
@@ -23,18 +23,18 @@ const filterBtn = document.querySelector(".filter-btn");
 filterBtn.addEventListener(("click"), () => {
     const minPrice = document.querySelector(".min-price").value;
     const maxPrice = document.querySelector(".max-price").value;
-    currentPeripheries = filter(allPeriphery, minPrice, maxPrice);
-    renderPeriphery(applySort(currentPeripheries, currentSort));
+    currentConsoles = filter(allConsoles, minPrice, maxPrice);
+    renderConsoles(applySort(currentConsoles, currentSort));
     filterContainer.classList.remove("active");
 });
 
-renderPeriphery(currentPeripheries);
+renderConsoles(currentConsoles);
 
 const resetBtn = document.querySelector(".reset-btn");
 resetBtn.addEventListener(("click"), () => {
     document.querySelector(".min-price").value = "";
     document.querySelector(".max-price").value = "";
-    currentPeripheries = reset(allPeriphery);
-    renderPeriphery(applySort(currentPeripheries, currentSort));
+    currentConsoles = reset(allConsoles);
+    renderConsoles(applySort(currentConsoles, currentSort));
     filterContainer.classList.remove("active");
 })

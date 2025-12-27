@@ -54,7 +54,7 @@
                     <div class="hamburger">
                         <a href="#" class="hamburger-toggle"><img src="../../images/menu.png" alt=""></a>
                         <ul class="hamburger-menu">
-                                <li><a href="../game-pages/all-games.html">Igre</a></li>
+                                <li><a href="../igre/all-games.html">Igre</a></li>
                                 <li><a href="#">Konzole</a></li>
                                 <li><a href="../periferija/all.html">Periferija</a></li>
                         </ul>
@@ -75,12 +75,56 @@
             </div>
             <div class="filter-and-sort">
                 <div class="filter">
-                    <a href="#">Filteri</a>
-                    <div class="price-slider-container">
-                        <h3>Filtriraj po cijeni</h3>
-                        <input type="range" id="price-range" min="20" max="780" value="780">
-                        <div class="price-label">Cijena: 20 € — <span id="current-price">780</span> €</div>
-                        <button class="filter-btn">Filtriraj</button>
+                    <a class="filter-toggle" href="#">Filteri</a>
+                    <div class="filter-container">
+                        <h3>Cijena:</h3>
+                        <div class="price-filter">
+                            <input type="number" class="min-price">
+                            <input type="number" class="max-price">
+                        </div>
+                        <h3>Žanr:</h3>
+                        <div class="genre-filter">
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="FPS">
+                                FPS
+                            </label>
+
+                            <label>
+                                <input type="checkbox"  class="genre-checkbox" value="Akcija">
+                                Akcija
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="Sport">
+                                Sport
+                            </label>
+
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="Utrke">
+                                Utrke
+                            </label>
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" class="genre-checkbox" value="Zabava">
+                                Zabava
+                            </label>
+                            <br>
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="Horor">
+                                Horor
+                            </label>
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="Open-world">
+                                Open-world
+                            </label>
+                            <label>
+                                <input type="checkbox" class="genre-checkbox" value="Multiplayer">
+                                Multiplayer
+                            </label>
+                        </div>
+                        <div class="filter-button-container">
+                            <button class="filter-btn">Filtriraj</button>
+                            <button class="reset-btn">Resetiraj</button>
+                        </div>
                     </div>
                 </div>
                 <div class="sort">
@@ -140,6 +184,7 @@
     </div>
     <script src="../../scripts/searchbar.js"></script>
     <script src="../../scripts/hamburgerMenu.js"></script>
-    <script type="module" src="../../scripts/nintendoConsoles.js"></script>
+    <script type="module" src="../../scripts/konzole/nintendo.js"></script>
+    <script src="../../scripts/showFilters.js"></script>
 </body>
 </html>

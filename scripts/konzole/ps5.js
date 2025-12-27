@@ -42,44 +42,39 @@ export const ps5Consoles = [
         releaseDate: "2025-11-13"
     },
 ]
-renderConsoles(ps5Consoles);
-function renderConsoles(consoles)
-{
-    let consolesHTML = "";
-    consoles.forEach((console) => {
-        consolesHTML += `
-            <div class="card">
-                <a href=""><img src="${console.image}" alt="">${console.name}</a>
-                <p class="console-price">${(console.priceCents/100).toFixed(2)}€</p>
-                <button>U košaricu</button>
-            </div>
-        `
-    })
-    document.querySelector(".console-cards").innerHTML = consolesHTML;
-}
+import { renderConsoles } from "../utils/renderConsoles.js";
+import { applySort } from "../utils/sort.js";
+import { filter } from "../utils/filter.js";
+import { reset } from "../utils/resetFilters.js";
+
+let currentConsoles = [...ps5Consoles];
+let currentSort = "";
+
+
 const sortSelect = document.querySelector('.sort-select');
 sortSelect.addEventListener('change', () => {
-    const selectedOption = sortSelect.value;
-    let sortedConsoles = [...ps5Consoles];
-    if(selectedOption === 'price-asc')
-    {
-        sortedConsoles.sort((a,b) => a.priceCents - b.priceCents);
-    }
-    if(selectedOption === 'price-desc')
-    {
-        sortedConsoles.sort((a,b) => b.priceCents - a.priceCents);
-    }
-    if(selectedOption === 'a-z')
-    {
-        sortedConsoles.sort((a,b) => a.name.localeCompare(b.name))
-    }
-    if(selectedOption === 'z-a')
-    {
-        sortedConsoles.sort((a,b) => b.name.localeCompare(a.name))
-    }
-    if(selectedOption === 'date-desc')
-    {
-        sortedConsoles.sort((a,b) => new Date(b.releaseDate) - new Date(a.releaseDate))
-    }
+    currentSort = sortSelect.value;
+    const sortedConsoles = applySort(currentConsoles, currentSort);
     renderConsoles(sortedConsoles);
 });
+
+const filterBtn = document.querySelector(".filter-btn");
+
+filterBtn.addEventListener(("click"), () => {
+    const minPrice = document.querySelector(".min-price").value;
+    const maxPrice = document.querySelector(".max-price").value;
+    currentConsoles = filter(ps5Consoles, minPrice, maxPrice);
+    renderConsoles(applySort(currentConsoles, currentSort));
+    filterContainer.classList.remove("active");
+});
+
+renderConsoles(currentConsoles);
+
+const resetBtn = document.querySelector(".reset-btn");
+resetBtn.addEventListener(("click"), () => {
+    document.querySelector(".min-price").value = "";
+    document.querySelector(".max-price").value = "";
+    currentConsoles = reset(ps5Consoles);
+    renderConsoles(applySort(currentConsoles, currentSort));
+    filterContainer.classList.remove("active");
+})

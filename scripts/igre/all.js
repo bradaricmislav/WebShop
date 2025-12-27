@@ -1,21 +1,21 @@
-import { ps5Periphery  } from "./ps5.js";
-import { xboxPeriphery } from "./xbox.js";
-import { nintendoPeriphery } from "./nintendo.js";
-import { renderPeriphery } from "../utils/renderPeriphery.js";
+import { ps5Games } from "./ps5.js";
+import { xboxGames } from "./xbox.js";
+import { nintendoGames } from "./nintendo.js";
+import { renderGames } from "../utils/renderGames.js";
 import { applySort } from "../utils/sort.js";
 import { filter } from "../utils/filter.js";
 import { reset } from "../utils/resetFilters.js";
 
-const allPeriphery = [...ps5Periphery, ...xboxPeriphery, ...nintendoPeriphery];
-let currentPeripheries = [...allPeriphery];
+const allGames = [...ps5Games, ...xboxGames, ...nintendoGames];
+let currentGames = [...allGames];
 let currentSort = "";
 
 
 const sortSelect = document.querySelector('.sort-select');
 sortSelect.addEventListener('change', () => {
     currentSort = sortSelect.value;
-    const sortedPeripheries = applySort(currentPeripheries, currentSort);
-    renderPeriphery(sortedPeripheries);
+    const sortedGames = applySort(currentGames, currentSort);
+    renderGames(sortedGames);
 });
 
 const filterBtn = document.querySelector(".filter-btn");
@@ -23,18 +23,18 @@ const filterBtn = document.querySelector(".filter-btn");
 filterBtn.addEventListener(("click"), () => {
     const minPrice = document.querySelector(".min-price").value;
     const maxPrice = document.querySelector(".max-price").value;
-    currentPeripheries = filter(allPeriphery, minPrice, maxPrice);
-    renderPeriphery(applySort(currentPeripheries, currentSort));
+    currentGames = filter(allGames, minPrice, maxPrice);
+    renderGames(applySort(currentGames, currentSort));
     filterContainer.classList.remove("active");
 });
 
-renderPeriphery(currentPeripheries);
+renderGames(currentGames);
 
 const resetBtn = document.querySelector(".reset-btn");
 resetBtn.addEventListener(("click"), () => {
     document.querySelector(".min-price").value = "";
     document.querySelector(".max-price").value = "";
-    currentPeripheries = reset(allPeriphery);
-    renderPeriphery(applySort(currentPeripheries, currentSort));
+    currentGames = reset(allGames);
+    renderGames(applySort(currentGames, currentSort));
     filterContainer.classList.remove("active");
 })
