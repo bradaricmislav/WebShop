@@ -1,7 +1,7 @@
 export const ps5Games = [
     {
         id: "8245",
-        image: "../../images/007.jpg",
+        image: "../../images/ps5/007.jpg",
         name: "007 - First Light",
         priceCents: 7999,
         releaseDate: "2026-03-26",
@@ -9,7 +9,7 @@ export const ps5Games = [
     },
     {
         id: "1936",
-        image: "../../images/codbo7.jpg",
+        image: "../../images/ps5/codbo7.jpg",
         name: "Call of Duty Black Ops 7",
         priceCents: 7999,
         releaseDate: "2025-11-14",
@@ -17,7 +17,7 @@ export const ps5Games = [
     },
     {
         id: "2792",
-        image: "../../images/bf6.jpg",
+        image: "../../images/ps5/bf6.jpg",
         name: "Battlefield 6",
         priceCents: 7000,
         releaseDate: "2025-10-10",
@@ -25,7 +25,7 @@ export const ps5Games = [
     },
     {
         id: "8698",
-        image: "../../images/fc26.jpg",
+        image: "../../images/ps5/fc26.jpg",
         name: "FC 26",
         priceCents: 5000,
         releaseDate: "2025-09-26",
@@ -34,7 +34,7 @@ export const ps5Games = [
     },
     {
         id: "4994",
-        image: "../../images/ghostofyotei.jpg",
+        image: "../../images/ps5/ghostofyotei.jpg",
         name: "Ghost of Yotei",
         priceCents: 6500,
         releaseDate: "2025-10-02",
@@ -42,7 +42,7 @@ export const ps5Games = [
     },
     {
         id: "1921",
-        image: "../../images/nba2k26.jpg",
+        image: "../../images/ps5/nba2k26.jpg",
         name: "NBA 2K26",
         priceCents: 3500,
         releaseDate: "2025-09-05",
@@ -50,7 +50,7 @@ export const ps5Games = [
     },
     {
         id: "5335",
-        image: "../../images/acshadows.jpg",
+        image: "../../images/ps5/acshadows.jpg",
         name: "Assassin's Creed Shadows",
         priceCents: 3999,
         releaseDate: "2025-03-20",
@@ -58,7 +58,7 @@ export const ps5Games = [
     },
     {
         id: "1520",
-        image: "../../images/deathstranding2.jpg",
+        image: "../../images/ps5/deathstranding2.jpg",
         name: "Death Stranding 2",
         priceCents: 5999,
         releaseDate: "2025-06-26",
@@ -66,7 +66,7 @@ export const ps5Games = [
     },
     {
         id: "4194",
-        image: "../../images/gt7.jpg",
+        image: "../../images/ps5/gt7.jpg",
         name: "Gran Turismo 7",
         priceCents: 3999,
         releaseDate: "2022-03-04",
@@ -74,7 +74,7 @@ export const ps5Games = [
     },
     {
         id: "3564",
-        image: "../../images/borderlands4.jpg",
+        image: "../../images/ps5/borderlands4.jpg",
         name: "Borderlands 4",
         priceCents: 6499,
         releaseDate: "2025-09-12",
@@ -82,7 +82,7 @@ export const ps5Games = [
     },
     {
         id: "8272",
-        image: "../../images/acmirage.jpg",
+        image: "../../images/ps5/acmirage.jpg",
         name: "Assassin's Creed Mirage",
         priceCents: 2499,
         releaseDate: "2023-10-05",
@@ -90,7 +90,7 @@ export const ps5Games = [
     },
     {
         id: "9825",
-        image: "../../images/acvalhalla.jpg",
+        image: "../../images/ps5/acvalhalla.jpg",
         name: "Assassin's Creed Valhalla",
         priceCents: 2000,
         releaseDate: "2020-11-10",
@@ -98,7 +98,7 @@ export const ps5Games = [
     },
     {
         id: "2941",
-        image: "../../images/bmwukong.jpg",
+        image: "../../images/ps5/bmwukong.jpg",
         name: "Black Myth Wukong",
         priceCents: 5499,
         releaseDate: "2024-08-20",
@@ -106,7 +106,7 @@ export const ps5Games = [
     },
     {
         id: "5941",
-        image: "../../images/ghostoftsushima.jpg",
+        image: "../../images/ps5/ghostoftsushima.jpg",
         name: "Ghost of Tsushima",
         priceCents: 2000,
         releaseDate: "2020-07-17",
@@ -114,7 +114,7 @@ export const ps5Games = [
     },
     {
         id: "3640",
-        image: "../../images/gowragnarok.jpg",
+        image: "../../images/ps5/gowragnarok.jpg",
         name: "God of War Ragnarok",
         priceCents: 2499,
         releaseDate: "2022-11-09",
@@ -122,7 +122,7 @@ export const ps5Games = [
     },
     {
         id: "5952",
-        image: "../../images/gtav.jpg",
+        image: "../../images/ps5/gtav.jpg",
         name: "GTA V",
         priceCents: 2499,
         releaseDate: "2022-03-15",
@@ -130,7 +130,7 @@ export const ps5Games = [
     },
     {
         id: "8986",
-        image: "../../images/horizond.jpg",
+        image: "../../images/ps5/horizond.jpg",
         name: "Horizon Zero Dawn",
         priceCents: 2500,
         releaseDate: "2024-10-31",
@@ -138,7 +138,7 @@ export const ps5Games = [
     },
     {
         id: "3562",
-        image: "../../images/re2.jpg",
+        image: "../../images/ps5/re2.jpg",
         name: "Resident Evil 2",
         priceCents: 2499,
         releaseDate: "2019-01-25",
@@ -146,7 +146,7 @@ export const ps5Games = [
     },
     {
         id: "5516",
-        image: "../../images/re3.jpg",
+        image: "../../images/ps5/re3.jpg",
         name: "Resident Evil 3",
         priceCents: 2499,
         releaseDate: "2020-04-03",
@@ -154,7 +154,7 @@ export const ps5Games = [
     },
     {
         id: "0998",
-        image: "../../images/re4.jpg",
+        image: "../../images/ps5/re4.jpg",
         name: "Resident Evil 4",
         priceCents: 2499,
         releaseDate: "2023-03-24",
@@ -162,7 +162,7 @@ export const ps5Games = [
     },
     {
         id: "9301",
-        image: "../../images/spidermanmm.jpg",
+        image: "../../images/ps5/spidermanmm.jpg",
         name: "Spider-Man Miles Morales",
         priceCents: 2000,
         releaseDate: "2020-11-12",
@@ -170,7 +170,7 @@ export const ps5Games = [
     },
     {
         id: "6805",
-        image: "../../images/swjs.jpg",
+        image: "../../images/ps5/swjs.jpg",
         name: "Star Wars Jedi Survivor",
         priceCents: 2499,
         releaseDate: "2023-04-28",
@@ -178,7 +178,7 @@ export const ps5Games = [
     },
     {
         id: "1099",
-        image: "../../images/tlou2.jpg",
+        image: "../../images/ps5/tlou2.jpg",
         name: "The Last of Us 2",
         priceCents: 1499,
         releaseDate: "2024-01-19",
@@ -186,7 +186,7 @@ export const ps5Games = [
     },
     {
         id: "1267",
-        image: "../../images/uncharted.jpg",
+        image: "../../images/ps5/uncharted.jpg",
         name: "Uncharted Legacy of Thieves",
         priceCents: 1499,
         releaseDate: "2022-01-28",

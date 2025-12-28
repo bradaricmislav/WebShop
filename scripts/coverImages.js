@@ -1,19 +1,19 @@
 const coverImages = [
     {
         name: "007 First Light",
-        image: "../images/007cover.jpg"
+        image: "../images/main/007cover.jpg"
     },
     {
         name: "Battlefield 6",
-        image: "../images/bf6cover.jpeg"
+        image: "../images/main/bf6cover.jpeg"
     },
     {
         name: "Call of Duty Black Ops 7",
-        image: "../images/codbo7cover.jpg"
+        image: "../images/main/codbo7cover.jpg"
     },
     {
         name: "Ghost of Yotei",
-        image: "../images/goycover.jpg"
+        image: "../images/main/goycover.jpg"
     }
 ];
 let coverImagesHTML = "";
