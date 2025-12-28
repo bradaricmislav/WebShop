@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../styles/navbar.css">
     <link rel="stylesheet" href="../../styles/footer.css">
     <link rel="stylesheet" href="../../styles/filter-and-sort.css">
-    <link rel="stylesheet" href="../../styles/konzole.css">
+    <link rel="stylesheet" href="../../styles/games.css">
     <link rel="stylesheet" href="../../styles/homepage-responsivity.css">
     <link rel="stylesheet" href="../../styles/procucts-responsitivity.css">
     <link rel="icon" href="../../images/joystick.png">
@@ -20,43 +20,43 @@
     <div class="container">
         <div class="navbar">
             <div class="left-section">
-                <a href="../../index.html"><img src="../../images/joysticklogo.png" alt="Logo"></a>
-                <a href="../../index.html">GameShop</a>
+                <a href="../index.html"><img src="../../images/joysticklogo.png" alt="Logo"></a>
+                <a href="../index.html">GameShop</a>
             </div>
             <div class="right-section">
                 <ul>
                     <div class="left-part">
                         <li class="dropdown">
-                            <a href="../igre/all-games.html"><img src="../../images/disc.png" alt="">Igre</a>
+                            <a href="igre/all-games.html"><img src="../../images/disc.png" alt="">Igre</a>
                             <ul class="dropdown-menu">
-                                <li><a href="../igre/ps5-games.html">PlayStation 5</a></li>
-                                <li><a href="../igre/xbox-games.html">Xbox</a></li>
-                                <li><a href="../igre/nintendo-games.html">Nintendo</a></li>
+                                <li><a href="igre/ps5-games.html">PlayStation 5</a></li>
+                                <li><a href="igre/ps5-games.html">Xbox</a></li>
+                                <li><a href="igre/ps5-games.html">Nintendo</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="all.html"><img src="../../images/controller.png" alt="">Konzole</a>
+                            <a href="konzole/all.html"><img src="../../images/controller.png" alt="">Konzole</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">PlayStation 5</a></li>
-                                <li><a href="xbox.html">Xbox</a></li>
-                                <li><a href="nintendo.html">Nintendo</a></li>
+                                <li><a href="konzole/ps5.html">PlayStation 5</a></li>
+                                <li><a href="konzole/xbox.html">Xbox</a></li>
+                                <li><a href="konzole/nintendo.html">Nintendo</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="../periferija/all.html"><img src="../../images/headphone-mic.png" alt="">Periferija</a>
+                            <a href="periferija/all.html"><img src="../../images/headphone-mic.png" alt="">Periferija</a>
                             <ul class="dropdown-menu">
-                                <li><a href="../periferija/ps5.html">PlayStation 5</a></li>
-                                <li><a href="../periferija/xbox.html">Xbox</a></li>
-                                <li><a href="../periferija/nintendo.html">Nintendo</a></li>
+                                <li><a href="periferija/ps5.html">PlayStation 5</a></li>
+                                <li><a href="periferija/xbox.html">Xbox</a></li>
+                                <li><a href="periferija/nintendo.html">Nintendo</a></li>
                             </ul>
                         </li>
                     </div>
                     <div class="hamburger">
                         <a href="#" class="hamburger-toggle"><img src="../../images/menu.png" alt=""></a>
                         <ul class="hamburger-menu">
-                                <li><a href="../igre/all-games.html">Igre</a></li>
-                                <li><a href="#">Konzole</a></li>
-                                <li><a href="../periferija/all.html">Periferija</a></li>
+                                <li><a href="igre/all-games.html">Igre</a></li>
+                                <li><a href="konzole/all.html">Konzole</a></li>
+                                <li><a href="periferija/all.html">Periferija</a></li>
                         </ul>
                     </div>
                     <div class="right-part">
@@ -70,43 +70,11 @@
             </div>
         </div>
         <div class="main">
-            <div class="console-names">
-                <h1>PlayStation 5 konzole</h1>
-            </div>
-            <div class="filter-and-sort">
-                <div class="filter">
-                    <a class="filter-toggle" href="#">Filteri</a>
-                    <div class="filter-container">
-                        <h3>Cijena:</h3>
-                        <div class="price-filter">
-                            <input type="number" class="min-price">
-                            <input type="number" class="max-price">
-                        </div>
-                        <div class="filter-button-container">
-                            <button class="filter-btn">Filtriraj</button>
-                            <button class="reset-btn">Resetiraj</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="sort">
-                    <select class="sort-select">
-                        <option value="default">Zadano</option>
-                        <option value="price-asc">Jeftinije prvo</option>
-                        <option value="price-desc">Skuplje prvo</option>
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                        <option value="date-desc">Najnovije prvo</option>
-                    </select>
-                </div>
-            </div>
-            <div class="game-pages">
-                <a href="all.html">Sve</a>
-                <a class="active" href="#">PS5</a>
-                <a href="xbox.html">Xbox</a>
-                <a href="nintendo.html">Nintendo</a>
-            </div>
-            <div class="console-cards">
+            <div class="search-result">
                 
+            </div>
+            <div class="game-cards">
+
             </div>
         </div>
         <div class="footer">
@@ -145,7 +113,8 @@
     </div>
     <script src="../../scripts/searchbar.js"></script>
     <script src="../../scripts/hamburgerMenu.js"></script>
-    <script type="module" src="../../scripts/konzole/ispis/ps5.js"></script>
+    <script type="module" src="../../scripts/igre/ps5.js"></script>
     <script src="../../scripts/showFilters.js"></script>
+    <script type="module" src="../scripts/searchResults.js"></script>
 </body>
 </html>

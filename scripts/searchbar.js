@@ -8,3 +8,11 @@ searchToggle.addEventListener("click", (event) => {
         searchBar.focus();
     }
 });
+
+searchBar.addEventListener("keydown", (event) => {
+    if(event.key === "Enter")
+    {
+        event.preventDefault();
+        searchBar.classList.remove("active");
+    }
+})

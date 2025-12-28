@@ -2,7 +2,7 @@ body
 {
     background-color: #FFFBFB;;
 }
-.main .console-names
+.main .console-names, .search-result
 {
     display: flex;
     align-items: center;
