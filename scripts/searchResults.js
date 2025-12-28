@@ -22,16 +22,10 @@ const searchResult = document.querySelector(".search-result");
 const query = sessionStorage.getItem("searchQuery")?.toLowerCase().trim();
 
 let productsToRender = allProducts;
-if (query) {
-    productsToRender = allProducts.filter(game =>
-        game.name.toLowerCase().includes(query)
-    );
-    sessionStorage.removeItem("searchQuery");
+productsToRender = allProducts.filter(game =>
+    game.name.toLowerCase().includes(query)
+);
+sessionStorage.removeItem("searchQuery");
+searchResult.innerHTML = `<h3>Rezultati pretrage: ${query}</h3>`;
+renderGames(productsToRender);
 
-    if (searchResult) {
-        searchResult.innerHTML = `<h3>Rezultati pretrage: ${query}</h3>`;
-    }
-}
-if (productContainer) {
-    renderGames(productsToRender);
-}
