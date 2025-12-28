@@ -6,6 +6,15 @@ searchInput.addEventListener("keydown", (event) => {
         if (!query) return;
         sessionStorage.setItem("searchQuery", query);
         searchInput.classList.remove("active");
-        window.location.href = "pages/searchResults.html";
+
+        const currentPath = window.location.pathname;
+        if(currentPath.includes("index.html"))
+        {
+            window.location.href = "pages/searchResults.html";
+        }
+        else
+        {
+            window.location.href = "searchResults.html";
+        }
     }
 });

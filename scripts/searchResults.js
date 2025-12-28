@@ -22,8 +22,8 @@ const searchResult = document.querySelector(".search-result");
 const query = sessionStorage.getItem("searchQuery")?.toLowerCase().trim();
 
 let productsToRender = allProducts;
-productsToRender = allProducts.filter(game =>
-    game.name.toLowerCase().includes(query)
+productsToRender = allProducts.filter(product =>
+    product.name.toLowerCase().includes(query)
 );
 sessionStorage.removeItem("searchQuery");
 searchResult.innerHTML = `<h3>Rezultati pretrage: ${query}</h3>`;
