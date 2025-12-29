@@ -5,6 +5,13 @@ import { renderGames } from "../utils/renderGames.js";
 import { applySort } from "../utils/sort.js";
 import { filter } from "../utils/gameFilter.js";
 import { reset } from "../utils/resetFilters.js";
+import { addToCart } from "../cart.js";
+
+document.querySelector(".game-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
 
 const allGames = [...ps5Games, ...xboxGames, ...nintendoGames];
 let currentGames = [...allGames];

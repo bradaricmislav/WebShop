@@ -3,6 +3,13 @@ import { renderPeriphery } from "../../utils/renderPeriphery.js";
 import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
 import { xboxPeriphery } from "../xbox.js";
+import { addToCart } from "../../cart.js";
+
+document.querySelector(".periphery-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
 
 
 let currentPeripheries = [...xboxPeriphery];

@@ -4,6 +4,14 @@ import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
 import { nintendoPeriphery } from "../nintendo.js";
 
+import { addToCart } from "../../cart.js";
+
+document.querySelector(".periphery-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
+
 
 let currentPeripheries = [...nintendoPeriphery];
 let currentSort = "";

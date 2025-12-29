@@ -4,6 +4,14 @@ import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
 import { nintendoConsoles } from "../nintendo.js";
 
+import { addToCart } from "../../cart.js";
+
+document.querySelector(".console-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
+
 
 let currentConsoles = [...nintendoConsoles];
 let currentSort = "";

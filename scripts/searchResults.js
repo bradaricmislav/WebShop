@@ -9,6 +9,14 @@ import { ps5Periphery } from "./periferija/ps5.js";
 import { xboxPeriphery } from "./periferija/xbox.js";
 import { nintendoPeriphery } from "./periferija/nintendo.js";
 
+import { addToCart } from "./cart.js";
+
+document.querySelector(".game-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
+
 const games = [...ps5Games, ...xboxGames, ...nintendoGames];
 
 const consoles = [...ps5Consoles, ...xboxConsoles, ...nintendoConsoles];
@@ -17,9 +25,8 @@ const peripheries = [...ps5Periphery, ...xboxPeriphery, ...nintendoPeriphery];
 
 const allProducts = [...games, ...consoles, ...peripheries];
 
-const productContainer = document.querySelector(".game-cards");
 const searchResult = document.querySelector(".search-result");
-const query = sessionStorage.getItem("searchQuery")?.toLowerCase().trim();
+const query = sessionStorage.getItem("searchQuery").toLowerCase().trim();
 
 let productsToRender = allProducts;
 productsToRender = allProducts.filter(product =>

@@ -1,10 +1,15 @@
-import { ps5Games } from "../ps5.js";
-import { filter } from "../../utils/filter.js";
+import { filter } from "../../utils/gameFilter.js";
 import { renderGames } from "../../utils/renderGames.js";
 import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
+import { ps5Games } from "../ps5.js";
+import { addToCart, cart } from "../../cart.js";
 
-
+document.querySelector(".game-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
 let currentGames = [...ps5Games];
 let currentSort = "";
 const sortSelect = document.querySelector('.sort-select');

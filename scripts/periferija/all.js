@@ -6,6 +6,14 @@ import { applySort } from "../utils/sort.js";
 import { filter } from "../utils/filter.js";
 import { reset } from "../utils/resetFilters.js";
 
+import { addToCart } from "../cart.js";
+
+document.querySelector(".periphery-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
+
 const allPeriphery = [...ps5Periphery, ...xboxPeriphery, ...nintendoPeriphery];
 let currentPeripheries = [...allPeriphery];
 let currentSort = "";

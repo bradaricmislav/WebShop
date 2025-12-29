@@ -6,7 +6,7 @@ export function renderConsoles(consoles)
         <div class="card">
             <a href=""><img src="${console.image}" alt="">${console.name}</a>
                 <p class="console-price">${(console.priceCents/100).toFixed(2)}€</p>
-                <button>U košaricu</button>
+                <button class="add-to-cart" data-product-id="${console.id}">U košaricu</button>
         </div>
         `;
     })

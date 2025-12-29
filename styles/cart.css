@@ -1,0 +1,116 @@
+*{
+    font-family: Roboto;
+    margin: 0;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.orders
+{
+    display: flex;
+    flex-direction: column;
+}
+.order
+{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 600px;
+}
+.order img 
+{
+    width: 250px;
+    height: auto;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.order .order-summary
+{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-right: 40px;
+    gap: 10px;
+}
+.order .order-summary .quantity, .total
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.order .order-summary .quantity input
+{
+    width: 35px;
+    height: 25px;
+    font-size: 16px;
+    border: none;
+}
+.order .order-summary .quantity input::placeholder
+{
+    color: black;
+}
+.order .order-summary .name
+{
+    font-size: 24px;
+}
+.order .order-summary .price
+{
+    color: #FF4365;;
+}
+.order .order-summary button
+{
+    background-color: rgb(206, 34, 34);
+    color: white;
+    padding: 10px 12px;
+    border: 1px solid rgb(206, 34, 34);
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.order .order-summary button:hover 
+{
+    opacity: 0.7;
+}
+.order-payment
+{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 20px;
+    width: 250px;
+    gap: 10px;
+}
+.order-payment button
+{
+    background-color: #111111;
+    color: white;
+    border: 1px solid #111111;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 150px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.order-payment button:hover
+{
+    opacity: 0.7;
+}
+hr
+{
+    width: 150px;
+}

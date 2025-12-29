@@ -3,6 +3,13 @@ import { renderConsoles } from "../../utils/renderConsoles.js";
 import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
 import { ps5Consoles } from "../ps5.js";
+import { addToCart } from "../../cart.js";
+
+document.querySelector(".console-cards").addEventListener("click", e => {
+    if (e.target.classList.contains("add-to-cart")) {
+        addToCart(e.target.dataset.productId);
+    }
+});
 
 
 let currentConsoles = [...ps5Consoles];

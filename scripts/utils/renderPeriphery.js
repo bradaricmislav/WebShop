@@ -6,7 +6,7 @@ export function renderPeriphery(peripheries)
         <div class="card">
             <a href=""><img src="${periphery.image}" alt="">${periphery.name}</a>
                 <p class="periphery-price">${(periphery.priceCents/100).toFixed(2)}€</p>
-                <button>U košaricu</button>
+                <button class="add-to-cart" data-product-id="${periphery.id}">U košaricu</button>
         </div>
         `;
     })
