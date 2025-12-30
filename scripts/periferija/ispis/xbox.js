@@ -8,6 +8,11 @@ import { addToCart } from "../../cart.js";
 document.querySelector(".periphery-cards").addEventListener("click", e => {
     if (e.target.classList.contains("add-to-cart")) {
         addToCart(e.target.dataset.productId);
+        const card = e.target.closest(".card"); 
+        card.querySelector(".added-to-cart").style.display='block';
+        setTimeout(() => {
+            card.querySelector(".added-to-cart").style.display='none';
+        },3000);
     }
 });
 

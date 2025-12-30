@@ -1,12 +1,31 @@
 *{
     font-family: Roboto;
     margin: 0;
+    padding: 0;
 }
 .main
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+}
+.main .cart-header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 12px 10px;
+    height: 135px;
+}
+.non-empty-header
+{
+    display: flex;
+    gap: 20px;
 }
 .orders
 {
@@ -15,13 +34,14 @@
 }
 .order
 {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: left;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     width: 600px;
+    height: 280px;
 }
 .order img 
 {
@@ -80,7 +100,7 @@
 }
 .order-payment
 {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,6 +112,8 @@
     padding: 20px;
     width: 250px;
     gap: 10px;
+    flex-grow: unset;
+    height: 240px;
 }
 .order-payment button
 {
@@ -105,6 +127,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    margin-top: 10px;
 }
 .order-payment button:hover
 {
@@ -113,4 +136,52 @@
 hr
 {
     width: 150px;
+}
+
+.return-to-main-page button
+{
+    background-color: #111111;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #111111;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.return-to-main-page button:hover
+{
+    opacity: 0.7;
+}
+.return-to-main-page button:active
+{
+    opacity: 0.5;
+}
+.no-order 
+{
+    margin-bottom: 20px;
+}
+.order-success 
+{
+    position: fixed;          
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    z-index: 100;
+}
+
+.order-success-box 
+{
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }

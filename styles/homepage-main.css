@@ -158,6 +158,12 @@
     color: #FF4365;
     font-weight: bold;
 }
+.added-to-cart
+{
+    color: green;
+    font-weight: bold;
+    display: none;
+}
 .container .main .consoles
 {
     display: grid;

@@ -7,7 +7,7 @@ export const xboxConsoles = [
         releaseDate: "2020-11-10"
     },
     {
-        id: "4084",
+        id: "4081",
         image: "../../images/xboxkonzole/xboxseriesx1tb.webp",
         name: "Xbox Series X 1 TB",
         priceCents: 83999,
