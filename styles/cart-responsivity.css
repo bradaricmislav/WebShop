@@ -1,0 +1,94 @@
+@media (max-width: 950px)
+{
+    .order
+    {
+        width: 500px;
+    }
+}
+@media (max-width: 820px)
+{
+    .order img 
+    {
+        width: 200px;
+    }
+    .order
+    {
+        width: 400px;
+    }
+    .order-payment
+    {
+        width: 200px;
+        font-size: 16px;
+    }
+    .order-payment button
+    {
+        width: 125px;
+    }
+}
+@media (max-width: 680px)
+{
+    
+    .order
+    {
+        width: 350px;
+    }
+    .order .order-summary .name
+    {
+        font-size: 18px;
+    }
+    .order .order-summary .quantity input 
+    {
+        font-size: 14px;
+        width: 35px;
+    }
+    .order-payment
+    {
+        width: 175px;
+        font-size: 16px;
+    }
+    .order-payment button
+    {
+        width: 100px;
+    }
+}
+@media (max-width: 610px)
+{
+    .order img 
+    {
+        width: 175px;
+        
+    }
+    .order
+    {
+        width: 325px;
+    }
+    .order-payment
+    {
+        width: 150px;
+    }
+}
+@media (max-width: 560px)
+{   
+    .non-empty-header
+    {
+        gap: 10px;
+        justify-content: center;
+    }
+    .order
+    {
+        width: 290px;
+    }
+    .order img 
+    {
+        
+        width: 150px;
+    }
+    .order-payment
+    {
+        font-size: 14px;
+    }
+    .order-payment button
+    {
+        width: 80px;
+    }
+}

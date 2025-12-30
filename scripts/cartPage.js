@@ -1,4 +1,4 @@
-import { cart, removeFromCart} from "./cart.js";
+import { cart, removeFromCart, saveCart} from "./cart.js";
 import { games } from "./games.js"
 import { ps5Games } from "./igre/ps5.js";
 import { xboxGames } from "./igre/xbox.js";
@@ -50,7 +50,7 @@ export function renderCart()
             <p class="price">${(matchingProduct.priceCents/100).toFixed(2)} €</p>
             <div class="quantity">
                 <p>Količina:</p>
-                <input type="number" value="${cartItem.quantity}" min="1">
+                <input class="quantity-input" data-product-id="${productId}" type="number" value="${cartItem.quantity}" min="1">
             </div>
             <div class="delete-item">
                 <button 
@@ -91,6 +91,7 @@ export function renderCart()
     placeAnOrder();
     renderCart();
 });
+updateQuantity();
 }
 
 function calculateShipping(totalPrice)
@@ -128,5 +129,17 @@ function successfulOrder()
     setTimeout(() => {
         overlay.remove();
     }, 3000);
+}
+function updateQuantity()
+{
+    document.querySelectorAll(".quantity-input").forEach(input => {
+        input.addEventListener("input", () => {
+            const productId = input.dataset.productId;
+            const cartItem = cart.find(item => item.id === productId);
+            cartItem.quantity = input.value;
+            saveCart();
+            renderCart();
+        });
+    });
 }
 renderCart();
