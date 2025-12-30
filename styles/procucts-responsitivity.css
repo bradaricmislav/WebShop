@@ -35,6 +35,6 @@
 {
     .container .main .game-cards, .container .main .console-cards, .container .main .periphery-cards
     {
-        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
