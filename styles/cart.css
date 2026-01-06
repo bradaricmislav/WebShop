@@ -1,5 +1,9 @@
-*{
+*
+{
     font-family: Roboto;
+}
+.main *
+{
     margin: 0;
     padding: 0;
 }

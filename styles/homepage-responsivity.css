@@ -78,6 +78,13 @@
     {
         font-size: 13px;
     }
+    .container .footer
+    {
+        height: 800px;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 50px;
+    }
     .container .footer .right-section a img 
     {
         width: 50px;
@@ -97,13 +104,6 @@
     .container .navbar .right-section .left-part
     {
         display: none;
-    }
-    .container .footer
-    {
-        padding-top: 20px;
-        height: 450px;
-        flex-direction: column;
-        justify-content: space-around;
     }
     .container .main .consoles .console 
     {

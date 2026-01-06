@@ -18,7 +18,6 @@ export function renderCart()
     document.querySelector(".order-payment").innerHTML = "";
     if (cart.length === 0) {
         document.querySelector(".main").style.height="52.75vh"; 
-        document.querySelector(".empty-cart").innerHTML = `<p class="no-order">Vaša košarica je prazna.</p>`;
         const orderPaymentContainer = document.querySelector(".order-payment");
         orderPaymentContainer.remove();
         document.querySelector(".empty-cart").innerHTML = `
@@ -79,11 +78,6 @@ export function renderCart()
         button.addEventListener('click', () => {
             const productId = button.dataset.productId; 
             removeFromCart(productId);
-
-            const container = document.querySelector(
-                `.js-cart-item-container-${productId}`
-            );
-            container.remove();
             renderCart();
         });
     });

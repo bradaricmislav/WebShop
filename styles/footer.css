@@ -62,10 +62,10 @@
 .container .footer .right-section
 {
     display: flex;
-    justify-content: end;
-    margin-right: 1.3vw;
-    align-items: start;
-    margin-bottom: 5.5vh;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: center; 
+    margin-right: 1.5vw;
 }
 .container .footer .right-section p
 {
@@ -74,10 +74,76 @@
     text-align: center;
     font-family: Roboto;
 }
+
+.container .footer .right-section .newsletter-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+    position: relative;
+}
+.container .footer .right-section .newsletter-form label
+{
+    color: white;
+}
+.container .footer .right-section .newsletter-form p 
+{
+    min-height: 1.2em;   
+    margin-top: 0.5rem;
+    color: white;
+}
+.container .footer .right-section .newsletter-form input
+{
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid white;
+    width: 300px;
+}
+.container .footer .right-section .newsletter-form button
+{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 8px;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    margin-right: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 2px #111111;
+    transition: opacity 0.3s ease;
+}
+.container .footer .right-section .newsletter-form button:hover
+{
+    opacity: 0.7;
+}
+.container .footer .right-section .newsletter-form button:active
+{
+    opacity: 0.5;
+}
+.container .footer .right-section .follow-us 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+    width: 300px;
+}
+.container .footer .right-section .social-icons 
+{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
 .container .footer .right-section a img 
 {
-    margin: 0.2vw;
-    width: 65px;
+    width: 35px;
 }
 .container .copyright
 {
