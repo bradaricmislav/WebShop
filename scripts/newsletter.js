@@ -5,13 +5,18 @@ document.querySelector(".newsletterForm").addEventListener("submit", function(e)
   const msg = document.querySelector(".newsletter-message");
 
   if (!email) 
-    {
+  {
     msg.textContent = "Email je obavezan.";
     return;
   }
 
-  if (!email.includes("@")) 
-    {
+  else if (!email.includes("@")) 
+  {
+    msg.textContent = "Unesite ispravan email.";
+    return;
+  }
+  else if (!email.includes(".com") && !email.includes(".hr"))
+  {
     msg.textContent = "Unesite ispravan email.";
     return;
   }
