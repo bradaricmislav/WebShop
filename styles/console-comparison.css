@@ -15,19 +15,16 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    overflow-x: auto; 
 }
 table 
 {
 
     font-family: 'Roboto';
     border-collapse: collapse; 
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     background-color: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    overflow: hidden; 
     border: none; 
     margin-bottom: 20px;
 }
