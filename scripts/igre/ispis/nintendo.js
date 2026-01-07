@@ -47,12 +47,3 @@ resetBtn.addEventListener(("click"), () => {
     renderGames(applySort(currentGames, currentSort));
     filterContainer.classList.remove("active");
 });
-const searchInput = document.querySelector(".search-bar");
-searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    const searchedGames = currentGames.filter(game => game.name.toLowerCase().includes(query)
-    );
-
-    renderGames(applySort(searchedGames, currentSort));
-});

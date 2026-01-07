@@ -43,12 +43,3 @@ resetBtn.addEventListener(("click"), () => {
     renderConsoles(applySort(currentConsoles, currentSort));
     filterContainer.classList.remove("active");
 });
-const searchInput = document.querySelector(".search-bar");
-searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    const searchedConsoles = currentConsoles.filter(console => console.name.toLowerCase().includes(query)
-    );
-
-    renderConsoles(applySort(searchedConsoles, currentSort));
-});

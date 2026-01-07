@@ -6,11 +6,9 @@
     <title>GameShop</title>
     <link rel="stylesheet" href="../../styles/body.css">
     <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/console-comparison.css">
     <link rel="stylesheet" href="../../styles/footer.css">
-    <link rel="stylesheet" href="../../styles/filter-and-sort.css">
-    <link rel="stylesheet" href="../../styles/games.css">
     <link rel="stylesheet" href="../../styles/homepage-responsivity.css">
-    <link rel="stylesheet" href="../../styles/procucts-responsitivity.css">
     <link rel="icon" href="../../images/joystick.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,20 +25,20 @@
                 <ul>
                     <div class="left-part">
                         <li class="dropdown">
-                            <a href="all-games.html"><img src="../../images/header/disc.png" alt="">Igre</a>
+                            <a href="../igre/all-games.html"><img src="../../images/header/disc.png" alt="">Igre</a>
                             <ul class="dropdown-menu">
-                                <li><a href="ps5-games.html">PlayStation 5</a></li>
-                                <li><a href="xbox-games.html">Xbox</a></li>
-                                <li><a href="#">Nintendo</a></li>
+                                <li><a href="../igre/ps5-games.html">PlayStation 5</a></li>
+                                <li><a href="../igre/xbox-games.html">Xbox</a></li>
+                                <li><a href="../igre/nintendo-games.html">Nintendo</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="../konzole/all.html"><img src="../../images/header/controller.png" alt="">Konzole</a>
+                            <a href="all.html"><img src="../../images/header/controller.png" alt="">Konzole</a>
                             <ul class="dropdown-menu">
-                                <li><a href="../konzole/ps5.html">PlayStation 5</a></li>
-                                <li><a href="../konzole/xbox.html">Xbox</a></li>
-                                <li><a href="../konzole/nintendo.html">Nintendo</a></li>
-                                <li><a href="../konzole/console-comparison.html">Usporedba</a></li>
+                                <li><a href="ps5.html">PlayStation 5</a></li>
+                                <li><a href="xbox.html">Xbox</a></li>
+                                <li><a href="nintendo.html">Nintendo</a></li>
+                                <li><a href="#">Usporedba</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -55,8 +53,8 @@
                     <div class="hamburger">
                         <a href="#" class="hamburger-toggle"><img src="../../images/header/menu.png" alt=""></a>
                         <ul class="hamburger-menu">
-                                <li><a href="#">Igre</a></li>
-                                <li><a href="../konzole/all.html">Konzole</a></li>
+                                <li><a href="../igre/all-games.html">Igre</a></li>
+                                <li><a href="#">Konzole</a></li>
                                 <li><a href="../periferija/all.html">Periferija</a></li>
                         </ul>
                     </div>
@@ -71,82 +69,72 @@
             </div>
         </div>
         <div class="main">
-            <div class="console-names">
-                <h1>Nintendo igre</h1>
+            <div class="table-name">
+                <h1>Usporedba konzola</h1>
             </div>
-            <div class="filter-and-sort">
-                <div class="filter">
-                    <a class="filter-toggle" href="#">Filteri</a>
-                    <div class="filter-container">
-                        <h3>Cijena:</h3>
-                        <div class="price-filter">
-                            <input type="number" class="min-price">
-                            <input type="number" class="max-price">
-                        </div>
-                        <h3>Žanr:</h3>
-                        <div class="genre-filter">
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="FPS">
-                                FPS
-                            </label>
-
-                            <label>
-                                <input type="checkbox"  class="genre-checkbox" value="Akcija">
-                                Akcija
-                            </label>
-
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="Sport">
-                                Sport
-                            </label>
-
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="Utrke">
-                                Utrke
-                            </label>
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" class="genre-checkbox" value="Zabava">
-                                Zabava
-                            </label>
-                            <br>
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="Horor">
-                                Horor
-                            </label>
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="Open-world">
-                                Open-world
-                            </label>
-                            <label>
-                                <input type="checkbox" class="genre-checkbox" value="Multiplayer">
-                                Multiplayer
-                            </label>
-                        </div>
-                        <div class="filter-button-container">
-                            <button class="filter-btn">Filtriraj</button>
-                            <button class="reset-btn">Resetiraj</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="sort">
-                    <select class="sort-select">
-                        <option value="default">Zadano</option>
-                        <option value="price-asc">Jeftinije prvo</option>
-                        <option value="price-desc">Skuplje prvo</option>
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                        <option value="date-desc">Najnovije prvo</option>
-                    </select>
-                </div>
-            </div>
-            <div class="game-pages">
-                <a href="all-games.html">Sve</a>
-                <a href="ps5-games.html">PS5</a>
-                <a href="xbox-games.html">Xbox</a>
-                <a class="active" href="#">Nintendo</a>
-            </div>
-            <div class="game-cards">
-
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Konzola</th>
+                            <th>Procesor</th>
+                            <th>Grafička kartica</th>
+                            <th>Rezolucija</th>
+                            <th>Pohrana</th>
+                            <th>Cijena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PlayStation 5</td>
+                            <td>AMD Zen 2 / 8 jezgri / 3.5 Ghz</td>
+                            <td>AMD Radeon RDNA 2 GPU / 16GB of GDDR6 RAM / 576 GB/s</td>
+                            <td>4K / 120Hz</td>
+                            <td>825 GB/1 TB SSD</td>
+                            <td>572.99 €</td>
+                        </tr>
+                        <tr>
+                            <td>PlayStation 5 Pro</td>
+                            <td>AMD Zen 2 / 8 jezgri / 3.85 GHz</td>
+                            <td>AMD Radeon RDNA 3 GPU / 16GB of GDDR6 RAM / 448 GB/s</td>
+                            <td>4K / 120Hz</td>
+                            <td>2 TB SSD</td>
+                            <td>799.00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Xbox Series S</td>
+                            <td>AMD Zen 2 / 8 jezgri / 3.6 GHz</td>
+                            <td>AMD Radeon RDNA 2 GPU / 10GB of GDDR6 RAM / 560 GB/s</td>
+                            <td>1440p / 120Hz</td>
+                            <td>825 GB/1 TB SSD</td>
+                            <td>459.99 €</td>
+                        </tr>
+                        <tr>
+                            <td>Xbox Series X</td>
+                            <td>AMD Zen 2 / 8 jezgri / 3.8 GHz</td>
+                            <td>AMD Radeon RDNA 2 GPU / 16GB of GDDR6 RAM / 224 GB/s</td>
+                            <td>4K / 120Hz</td>
+                            <td>1 TB SSD</td>
+                            <td>694.99 €</td>
+                        </tr>
+                        <tr>
+                            <td>Nintendo Switch</td>
+                            <td>NVIDIA Tegra X1 / 4 jezgre / 1.02 GHz</td>
+                            <td>NVIDIA Maxwell / 4GB LPDDR4 / 25.6 GB/s</td>
+                            <td>1080p</td>
+                            <td>64 GB</td>
+                            <td>379.99 €</td>
+                        </tr>
+                        <tr>
+                            <td>Nintendo Switch 2</td>
+                            <td>NVIDIA Tegra T239 / 8 jezgri / 0.998 GHz</td>
+                            <td>NVIDIA Ampere / 12 GB LPDDR5 / 102 GB/s</td>
+                            <td>1080p</td>
+                            <td>256 GB</td>
+                            <td>499.99 €</td>
+                        </tr>
+                    </tbody>
+            </table>
             </div>
         </div>
         <div class="footer">
@@ -196,9 +184,7 @@
     </div>
     <script src="../../scripts/searchbar.js"></script>
     <script src="../../scripts/hamburgerMenu.js"></script>
-    <script type="module" src="../../scripts/igre/ispis/nintendo.js"></script>
-    <script src="../../scripts/showFilters.js"></script>
     <script src="../../scripts/newsletter.js"></script>
-    <script src="../../scripts/globalSearch.js"></script>
+    <script type="module" src="../../scripts/globalSearch.js"></script>
 </body>
 </html>

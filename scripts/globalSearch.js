@@ -12,6 +12,14 @@ searchInput.addEventListener("keydown", (event) => {
         {
             window.location.href = "pages/searchResults.html";
         }
+        else if(currentPath.includes("console-comparison.html") || currentPath.includes("all.html") || currentPath.includes("ps5.html") || currentPath.includes("xbox.html") || currentPath.includes("nintendo.html"))
+        {
+            window.location.href = "../searchResults.html";
+        }
+        else if (currentPath.includes("all-games.html") || currentPath.includes("ps5-games.html") || currentPath.includes("nintendo-games.html") || currentPath.includes("xbox-games.html"))
+        {
+            window.location.href = "../searchResults.html"
+        }
         else
         {
             window.location.href = "searchResults.html";

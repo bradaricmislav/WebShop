@@ -42,12 +42,3 @@ resetBtn.addEventListener(("click"), () => {
     renderPeriphery(applySort(currentPeripheries, currentSort));
     filterContainer.classList.remove("active");
 });
-const searchInput = document.querySelector(".search-bar");
-searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase().trim();
-
-    const searchedPeriphery = currentPeripheries.filter(periphery => periphery.name.toLowerCase().includes(query)
-    );
-
-    renderPeriphery(applySort(searchedPeriphery, currentSort));
-});
