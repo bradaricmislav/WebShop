@@ -1,4 +1,4 @@
-import { cart, removeFromCart, saveCart} from "./cart.js";
+import {cart} from "./cart.js";
 import { games } from "./games.js"
 import { ps5Games } from "./igre/ps5.js";
 import { xboxGames } from "./igre/xbox.js";
@@ -16,7 +16,7 @@ export function renderCart()
 {
     document.querySelector(".orders").innerHTML = "";
     document.querySelector(".order-payment").innerHTML = "";
-    if (cart.length === 0) {
+    if (cart.cartItems.length === 0) {
         document.querySelector(".main").style.height="52.75vh"; 
         const orderPaymentContainer = document.querySelector(".order-payment");
         orderPaymentContainer.remove();
@@ -28,7 +28,7 @@ export function renderCart()
     }
     let cartSummaryHTML = '';
     let totalPriceCents = 0;
-    cart.forEach((cartItem) => {
+    cart.cartItems.forEach((cartItem) => {
     const productId = cartItem.id;
 
     let matchingProduct;
@@ -77,7 +77,7 @@ export function renderCart()
     .forEach((button) => {
         button.addEventListener('click', () => {
             const productId = button.dataset.productId; 
-            removeFromCart(productId);
+            cart.removeFromCart(productId);
             renderCart();
         });
     });
@@ -106,7 +106,7 @@ function calculateShipping(totalPrice)
 }
 function placeAnOrder()
 {
-    cart.length=0;
+    cart.cartItems.length=0;
     localStorage.removeItem("cart");
     successfulOrder();
 }
@@ -129,9 +129,9 @@ function updateQuantity()
     document.querySelectorAll(".quantity-input").forEach(input => {
         input.addEventListener("input", () => {
             const productId = input.dataset.productId;
-            const cartItem = cart.find(item => item.id === productId);
+            const cartItem = cart.cartItems.find(item => item.id === productId);
             cartItem.quantity = input.value;
-            saveCart();
+            cart.saveCart();
             renderCart();
         });
     });

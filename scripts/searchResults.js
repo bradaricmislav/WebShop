@@ -9,11 +9,11 @@ import { ps5Periphery } from "./periferija/ps5.js";
 import { xboxPeriphery } from "./periferija/xbox.js";
 import { nintendoPeriphery } from "./periferija/nintendo.js";
 
-import { addToCart } from "./cart.js";
+import { cart } from "./cart.js";
 
 document.querySelector(".game-cards").addEventListener("click", e => {
     if (e.target.classList.contains("add-to-cart")) {
-        addToCart(e.target.dataset.productId);
+        cart.addToCart(e.target.dataset.productId);
         const card = e.target.closest(".card"); 
         card.querySelector(".added-to-cart").style.display='block';
         setTimeout(() => {

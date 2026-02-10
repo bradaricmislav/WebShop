@@ -4,11 +4,11 @@ import { reset } from "../../utils/resetFilters.js";
 import { applySort } from "../../utils/sort.js";
 import { ps5Periphery } from "../ps5.js";
 
-import { addToCart } from "../../cart.js";
+import { cart } from "../../cart.js";
 
 document.querySelector(".periphery-cards").addEventListener("click", e => {
     if (e.target.classList.contains("add-to-cart")) {
-        addToCart(e.target.dataset.productId);
+        cart.addToCart(e.target.dataset.productId);
         const card = e.target.closest(".card"); 
         card.querySelector(".added-to-cart").style.display='block';
         setTimeout(() => {
