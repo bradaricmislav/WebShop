@@ -6,7 +6,7 @@ A **responsive frontend webshop** built with **HTML, CSS, and Vanilla JavaScript
 - Dynamic product filtering by **category** and **platform**
 - **Search bar** to quickly find products
 - Interactive **shopping cart** with automatic total price calculation
-- Fully **responsive design** for mobile and desktop
+- **responsive design** 
 
 ## Technologies Used
 - HTML, CSS, JavaScript (Vanilla JS)
