@@ -15,3 +15,4 @@ A **responsive frontend webshop** built with **HTML, CSS, and Vanilla JavaScript
 - Local storage for cart persistence 
 
 **Note:** To run the webshop correctly, the project should be opened using a **live server**. 
+          To search for a product, press Enter after typing the product name.
